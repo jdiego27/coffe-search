@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Locator</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center">Coffee Shop Locator</h1>
+    <p class="text-center">Find the best coffee shops in your area</p>
+    <img src="static/banner2.jpg" alt="Image description" class="banner2">
+
+    <!-- Search Filters Section -->
+    <section>
+        <h2 class="mt-4">Search Filters</h2>
+        <form method="POST">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" class="form-control" id="location" name="location" placeholder="Enter location">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <label for="rating" class="form-label">Minimum Rating</label>
+                        <input type="number" class="form-control" id="rating" name="rating" placeholder="Enter rating (0-5)" min="0" max="5" step="0.1">
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <button type="submit" class="btn btn-primary w-100" id="btnsearch">Search</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- Coffee Shops Display Section -->
+    <section class="mt-5">
+        <h2>Available Coffee Shops</h2>
+        <div class="row">
+            {% if coffee_shops %}
+                {% for shop in coffee_shops %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ shop.name }}</h5>
+                                <p class="card-text"><strong>Location:</strong> {{ shop.location }}</p>
+                                <p class="card-text"><strong>Rating:</strong> {{ shop.rating }} / 5</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No coffee shops found based on the filters.</p>
+            {% endif %}
+        </div>
+    </section>
+</div>
+
+<!-- Bootstrap 5 JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
