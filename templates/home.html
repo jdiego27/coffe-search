@@ -88,16 +88,16 @@
 
          </b>
         <div class="row">
-            {% if coffee_shops %}
-                {% for shop in coffee_shops %}
+            {% if coffees %}
+                {% for coffee in coffees %}
                     <div class="col-md-3 mb-3">
                         <div class="card" style="width: 18rem;">
-                            <img src={{shop.image}} class="card-img-top" alt="...">
+                            <img src="" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">{{ shop.name }}</h5>
-                                <p class="card-text"><strong>Location:</strong> {{ shop.location }}</p>
-                                <p class="card-text"><strong>Rating:</strong> {{ shop.rating }} / 5</p>
-                                <p class="card-text"> <strong>Coffe type</strong></p>
+                                <h5 class="card-title">{{ coffee.name }}</h5>
+                                <p class="card-text"><strong>Location:</strong> {{ coffee.price }}</p>
+                                <p class="card-text"><strong>Rating:</strong> {{ coffee.size }} / 5</p>
+                                <p class="card-text"> <strong>Coffe type</strong>{{coffee.type}}</p>
                             </div>
                         </div>
                     </div>
