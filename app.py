@@ -4,9 +4,21 @@ import mysql.connector
 
 app = Flask(__name__)
 
-# Add data base
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:rootuser@localhost/coffee_database'
 
+# Add data base REMOTE
+#app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:rootuser@localhost/coffee_database'
+
+def get_db_connection():
+    connection = mysql.connector.connect(
+        host='jdleonr.mysql.pythonanywhere-services.com',  # e.g., 'localhost'
+        user='jdleonr',  # e.g., 'root'
+        password='rootuser',
+        database='jdleonr$coffe_database'
+    )
+    return connection
+
+'''
+# Add data base LOCAL
 def get_db_connection():
     connection = mysql.connector.connect(
         host='localhost',  # e.g., 'localhost'
@@ -15,6 +27,8 @@ def get_db_connection():
         database='coffee_database'
     )
     return connection
+'''
+
 
 """
 # Sample data for coffee shops (This can be replaced with a database)
