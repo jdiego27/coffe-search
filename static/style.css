@@ -1,9 +1,10 @@
-.banner2 {
+.banner {
     width: 100%; /* Full width */        
     height: 300px; /* Fixed height for the banner */
     object-fit: cover; /* Ensures the image covers the area without distorting */
     border-radius: 5px
         }
+
 #btnsearch {
     position: relative; 
 	top: 30px;

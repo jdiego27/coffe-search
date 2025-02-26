@@ -14,9 +14,39 @@
 <div class="container mt-5">
     <h1 class="text-center">Coffee Shop Locator</h1>
     <p class="text-center">Find the best coffee shops in your area</p>
-    <img src="static/banner2.jpg" alt="Image description" class="banner2">
+
+    <!-- Here goes the carousel-->
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="static/banner2.jpg" alt="Image description" class="banner">
+          </div>
+          <div class="carousel-item">
+            <img src="static/banner.jpg" alt="Image description" class="banner">
+          </div>
+          <div class="carousel-item">
+            <img src="static/banner3.jpg" alt="Image description" class="banner">
+          </div>
+          <div class="carousel-item">
+            <img src="static/banner4.jpg" alt="Image description" class="banner">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+ <!-- End of the carousel-->
 
     <!-- Search Filters Section -->
+
     <section>
         <h2 class="mt-4">Search Filters</h2>
         <form method="POST">
@@ -38,6 +68,16 @@
                 </div>
             </div>
         </form>
+    </section>
+
+    <!-- Sections results with images-->
+    <section>
+        <div class="card" style="width: 18rem;">
+            <img src="static/training.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
     </section>
 
     <!-- Coffee Shops Display Section -->
