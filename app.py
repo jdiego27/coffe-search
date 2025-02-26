@@ -4,10 +4,12 @@ app = Flask(__name__)
 
 # Sample data for coffee shops (This can be replaced with a database)
 coffee_shops = [
-    {"name": "Java Brew", "location": "Downtown", "rating": 4.5},
-    {"name": "Cafe Mocha", "location": "Uptown", "rating": 4.0},
-    {"name": "The Bean Spot", "location": "Midtown", "rating": 4.8},
-    {"name": "Café Latte", "location": "West End", "rating": 3.9},
+    {"name": "Java Brew", "location": "Downtown", "rating": 4.5, "image" : "static/coffee1.jpg"},
+    {"name": "Cafe Mocha", "location": "Uptown", "rating": 4.0, "image" : "static/coffee2.jpg"},
+    {"name": "The Bean Spot", "location": "Midtown", "rating": 4.8, "image" : "static/coffee1.jpg"},
+    {"name": "Café Latte", "location": "West End", "rating": 3.9, "image" : "static/coffee1.jpg"},
+    {"name": "Café Latte", "location": "West End", "rating": 3.9, "image" : "static/coffee1.jpg"},
+    {"name": "Café Latte", "location": "West End", "rating": 3.9, "image" : "static/coffee1.jpg"},
 ]
 
 @app.route('/', methods=['GET', 'POST'])

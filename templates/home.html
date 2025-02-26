@@ -70,7 +70,7 @@
         </form>
     </section>
 
-    <!-- Sections results with images-->
+    <!-- Sections results with images
     <section>
         <div class="card" style="width: 18rem;">
             <img src="static/training.jpg" class="card-img-top" alt="...">
@@ -79,19 +79,25 @@
             </div>
           </div>
     </section>
+    -->
 
     <!-- Coffee Shops Display Section -->
     <section class="mt-5">
         <h2>Available Coffee Shops</h2>
+         <b>
+
+         </b>
         <div class="row">
             {% if coffee_shops %}
                 {% for shop in coffee_shops %}
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
+                    <div class="col-md-3 mb-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src={{shop.image}} class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{ shop.name }}</h5>
                                 <p class="card-text"><strong>Location:</strong> {{ shop.location }}</p>
                                 <p class="card-text"><strong>Rating:</strong> {{ shop.rating }} / 5</p>
+                                <p class="card-text"> <strong>Coffe type</strong></p>
                             </div>
                         </div>
                     </div>
