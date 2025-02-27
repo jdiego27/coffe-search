@@ -92,10 +92,10 @@
                 {% for coffee in coffees %}
                     <div class="col-md-3 mb-3">
                         <div class="card" style="width: 18rem;">
-                            <img src="" class="card-img-top" alt="...">
-                            <div class="card-body">
+                            <img src="static/coffee2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body" >
                                 <h4 class="card-title">{{ coffee.name }}</h4>
-                                <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, amet adipisci. Consequuntur magnam aspernatur, dolores corporis repellendus magni quas eum incidunt. Nisi modi animi optio officiis tenetur culpa veniam eligendi.</h5>
+                                <h5>{{ coffee.description}}</h5>
                                 <p class="card-text mt-4"><strong>Type:</strong> {{ coffee.type }}</p>
                                 <p class="card-text"><strong>Size:</strong> {{ coffee.size }}</p>
                                 <p class="card-text"> <strong>Price:</strong>{{ coffee.price }}</p>
